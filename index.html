@@ -28,24 +28,20 @@
 
   h1, h2, h3, .card-title { font-family: 'Playfair Display', serif; }
 
-  /* HEADER */
   header { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px var(--shadow); }
   .header-brand { display: flex; align-items: center; gap: 10px; }
   .header-brand h1 { font-size: 1.25rem; color: var(--terracotta); letter-spacing: -0.01em; }
   .header-brand .brand-icon { font-size: 1.4rem; }
   .header-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 
-  /* BUTTONS */
   .btn { font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.15s ease; display: inline-flex; align-items: center; gap: 6px; line-height: 1; }
   .btn-primary { background: var(--terracotta); color: var(--white); }
   .btn-primary:hover { background: var(--terracotta-dark); }
   .btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
   .btn-ghost:hover { background: var(--bg2); color: var(--text); }
 
-  /* LAYOUT */
   .app-body { display: flex; flex: 1; overflow: hidden; height: calc(100vh - 60px); }
 
-  /* SIDEBAR */
   .sidebar { width: 240px; min-width: 240px; background: var(--white); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; }
   .sidebar-header { padding: 20px 16px 12px; border-bottom: 1px solid var(--border); }
   .sidebar-header h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-family: 'Inter', sans-serif; font-weight: 600; }
@@ -58,30 +54,25 @@
   .btn-add-room { width: 100%; justify-content: center; background: transparent; color: var(--terracotta); border: 1.5px dashed var(--terracotta); font-size: 0.85rem; padding: 9px 12px; border-radius: 8px; cursor: pointer; font-family: 'Inter', sans-serif; font-weight: 500; transition: all 0.15s ease; display: flex; align-items: center; gap: 6px; }
   .btn-add-room:hover { background: #FDF0EB; }
 
-  /* MAIN */
   .main { flex: 1; overflow-y: auto; display: flex; flex-direction: column; }
   .room-header { padding: 24px 28px 0; }
   .room-header h2 { font-size: 1.6rem; color: var(--text); margin-bottom: 16px; }
 
-  /* TABS */
   .tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--border); padding: 0 28px; overflow-x: auto; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
   .tab { font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; padding: 10px 16px; border: none; background: transparent; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; white-space: nowrap; transition: all 0.15s ease; border-radius: 6px 6px 0 0; }
   .tab:hover { color: var(--text); background: var(--bg2); }
   .tab.active { color: var(--terracotta); border-bottom-color: var(--terracotta); background: transparent; }
 
-  /* GRID */
   .grid-area { padding: 24px 28px; flex: 1; }
   .grid-toolbar { display: flex; justify-content: flex-end; margin-bottom: 20px; }
   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
 
-  /* EMPTY STATE */
   .empty-state { grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--muted); }
   .empty-state .empty-icon { font-size: 3rem; margin-bottom: 16px; opacity: 0.5; }
   .empty-state h3 { font-size: 1.1rem; color: var(--text); margin-bottom: 8px; }
   .empty-state p { font-size: 0.875rem; margin-bottom: 20px; max-width: 280px; margin-left: auto; margin-right: auto; line-height: 1.6; }
 
-  /* CARD */
   .card { background: var(--white); border-radius: 12px; box-shadow: 0 2px 8px var(--shadow); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow 0.2s ease, transform 0.2s ease; }
   .card:hover { box-shadow: 0 6px 20px var(--shadow-md); transform: translateY(-2px); }
   .card-image-wrap { position: relative; width: 100%; padding-top: 66.66%; background: var(--bg2); overflow: hidden; }
@@ -96,7 +87,6 @@
   .react-group.own-item { opacity: 0.45; cursor: not-allowed; }
   .react-group.own-item .react-btn { cursor: not-allowed; }
 
-  /* CARD FOOTER — REACTIONS */
   .card-footer { padding: 8px 10px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--bg2); gap: 4px; }
   .react-group { display: flex; gap: 3px; }
   .react-btn { background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 3px; font-size: 0.78rem; color: var(--muted); padding: 4px 6px; border-radius: 6px; transition: all 0.15s ease; font-family: 'Inter', sans-serif; font-weight: 500; line-height: 1; }
@@ -112,7 +102,6 @@
   .delete-btn { background: none; border: none; cursor: pointer; padding: 4px 6px; border-radius: 6px; color: var(--muted); transition: all 0.15s ease; display: flex; align-items: center; }
   .delete-btn:hover { background: #FEF0F0; color: #D04040; }
 
-  /* MODAL BASE */
   .modal-overlay { position: fixed; inset: 0; background: rgba(44,44,44,0.45); backdrop-filter: blur(4px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.2s ease; }
   .modal-overlay.open { opacity: 1; pointer-events: all; }
   .modal { background: var(--white); border-radius: 16px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(44,44,44,0.25); transform: translateY(16px) scale(0.98); transition: transform 0.2s ease; }
@@ -132,13 +121,11 @@
   .colour-picker-row input[type="color"] { width: 44px; height: 36px; padding: 2px; border-radius: 8px; cursor: pointer; border: 1.5px solid var(--border); background: var(--bg); }
   .colour-label { font-size: 0.85rem; color: var(--muted); }
 
-  /* IMAGE PREVIEW */
   .image-preview { border-radius: 10px; overflow: hidden; background: var(--bg2); display: none; }
   .image-preview.visible { display: block; }
   .image-preview img { width: 100%; max-height: 180px; object-fit: cover; display: block; }
   .image-preview-error { padding: 16px; text-align: center; font-size: 0.8rem; color: var(--muted); }
 
-  /* GOOGLE DRIVE */
   .gdrive-btn { font-family: 'Inter', sans-serif; font-size: 0.875rem; font-weight: 500; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--white); color: var(--text); cursor: pointer; display: inline-flex; align-items: center; gap: 7px; transition: all 0.15s ease; }
   .gdrive-btn:hover { background: var(--bg2); }
   .gdrive-btn.signed-in { border-color: var(--sage); color: var(--sage); }
@@ -153,7 +140,6 @@
   .upload-status.error { background: #FDECEC; color: #A03030; display: block; }
   .upload-status.loading { background: var(--bg2); color: var(--muted); display: block; }
 
-  /* COMMENTS MODAL */
   .comments-list { display: flex; flex-direction: column; gap: 10px; max-height: 260px; overflow-y: auto; }
   .comment-item { background: var(--bg); border-radius: 8px; padding: 10px 12px; }
   .comment-meta { font-size: 0.72rem; color: var(--muted); margin-bottom: 4px; }
@@ -165,11 +151,9 @@
   .comment-input-row input:focus { border-color: var(--terracotta); }
   .comment-input-row button { flex-shrink: 0; }
 
-  /* TOAST */
   .sync-toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(80px); background: #2C2C2C; color: #fff; font-size: 0.82rem; padding: 10px 18px; border-radius: 20px; z-index: 999; transition: transform 0.3s ease, opacity 0.3s ease; opacity: 0; white-space: nowrap; pointer-events: none; }
   .sync-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
-  /* MOBILE */
   @media (max-width: 680px) {
     .app-body { flex-direction: column; height: auto; overflow: visible; }
     .sidebar { width: 100%; min-width: 0; border-right: none; border-bottom: 1px solid var(--border); max-height: none; overflow: visible; }
@@ -330,7 +314,6 @@
 <div class="sync-toast" id="syncToast"></div>
 
 <script>
-// ── CONSTANTS ──────────────────────────────────────────────
 const CATEGORIES = ['Colour Schemes', 'Materials', 'Furniture', 'Fittings', 'Other'];
 const DEFAULT_ROOMS = [
   { id: 'r-living',   name: 'Living Room', isDefault: true },
@@ -342,17 +325,15 @@ const DEFAULT_ROOMS = [
 const ROOM_ICONS = { 'Living Room':'🛋️','Kitchen':'🍳','Bedroom':'🛏️','Bathroom':'🚿','Hallway':'🚪' };
 const LS_ROOMS     = 'homeRefurbPlanner_rooms';
 const LS_ITEMS     = 'homeRefurbPlanner_items';
-const LS_REACTIONS = 'homeRefurbPlanner_reactions'; // this device: { itemId: 'love'|'like'|'dislike' }
-const LS_COMMENTS  = 'homeRefurbPlanner_comments';  // merged from all devices
+const LS_REACTIONS = 'homeRefurbPlanner_reactions';
+const LS_COMMENTS  = 'homeRefurbPlanner_comments';
 
-// ── STATE ──────────────────────────────────────────────────
 let state = {
   rooms: [], items: [], reactions: {}, comments: [],
   activeRoomId: null, activeCategory: CATEGORIES[0],
 };
 let activeCommentItemId = null;
 
-// ── STORAGE ────────────────────────────────────────────────
 function loadData() {
   const rooms = JSON.parse(localStorage.getItem(LS_ROOMS) || 'null');
   state.rooms = (rooms && rooms.length) ? rooms : DEFAULT_ROOMS.map(r => ({ ...r }));
@@ -366,16 +347,13 @@ function saveItems()     { localStorage.setItem(LS_ITEMS,     JSON.stringify(sta
 function saveReactions() { localStorage.setItem(LS_REACTIONS, JSON.stringify(state.reactions)); }
 function saveComments()  { localStorage.setItem(LS_COMMENTS,  JSON.stringify(state.comments));  }
 
-// ── UTILITIES ──────────────────────────────────────────────
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
 function getRoomIcon(name) { return ROOM_ICONS[name] || '🏠'; }
-function getRoomName(id) { return (state.rooms.find(r => r.id === id) || {}).name || ''; }
 function escHtml(str) {
   if (!str) return '';
   return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 }
 
-// ── RENDER SIDEBAR ─────────────────────────────────────────
 function renderSidebar() {
   const list = document.getElementById('roomList');
   list.innerHTML = '';
@@ -388,7 +366,6 @@ function renderSidebar() {
   });
 }
 
-// ── RENDER TABS ────────────────────────────────────────────
 function renderTabs() {
   const bar = document.getElementById('tabsBar');
   bar.innerHTML = '';
@@ -401,7 +378,6 @@ function renderTabs() {
   });
 }
 
-// ── RENDER CARDS ───────────────────────────────────────────
 function renderCards() {
   const grid = document.getElementById('cardGrid');
   grid.innerHTML = '';
@@ -412,7 +388,6 @@ function renderCards() {
     return;
   }
 
-  // Sort: score = love*2 + like - dislike, then by most total reactions
   filtered.sort((a, b) => reactionScore(b) - reactionScore(a));
 
   filtered.forEach(item => {
@@ -485,7 +460,6 @@ function render() {
   document.getElementById('currentRoomName').textContent = room ? room.name : 'Select a room';
 }
 
-// ── ACTIONS ────────────────────────────────────────────────
 function selectRoom(id)   { state.activeRoomId = id;   render(); }
 function selectCategory(c){ state.activeCategory = c;  render(); }
 
@@ -503,23 +477,14 @@ function toggleReaction(itemId, type) {
   const item = state.items.find(i => i.id === itemId);
   if (!item) return;
   if (!item.reactionCounts) item.reactionCounts = { love: 0, like: 0, dislike: 0 };
-
-  // Remove previous reaction from counts
   if (current) item.reactionCounts[current] = Math.max(0, (item.reactionCounts[current]||0) - 1);
-
   if (current === type) {
-    // Toggle off
     delete state.reactions[itemId];
   } else {
-    // Set new reaction
     state.reactions[itemId] = type;
     item.reactionCounts[type] = (item.reactionCounts[type]||0) + 1;
   }
-
-  saveReactions();
-  saveItems();
-  renderCards();
-  saveToDriveDebounced();
+  saveReactions(); saveItems(); renderCards(); saveToDriveDebounced();
 }
 
 function deleteItem(itemId) {
@@ -531,7 +496,6 @@ function deleteItem(itemId) {
   renderCards();
 }
 
-// ── ADD ITEM MODAL ─────────────────────────────────────────
 function openAddModal() {
   if (!state.activeRoomId) { alert('Please select a room first.'); return; }
   document.getElementById('inputImageUrl').value = '';
@@ -579,9 +543,9 @@ function saveItem() {
   const addedBy = localStorage.getItem('refurb_user_name') || promptUserName();
   state.items.push({ id: uid(), roomId: state.activeRoomId, category: state.activeCategory, imageUrl, title, notes, colour, reactionCounts: { love:0, like:0, dislike:0 }, createdAt: Date.now(), addedBy, addedByDeviceId: DEVICE_ID });
   saveItems(); closeModal(); renderCards();
+  saveToDriveDebounced();
 }
 
-// ── COMMENTS ───────────────────────────────────────────────
 function openComments(itemId) {
   activeCommentItemId = itemId;
   const item = state.items.find(i => i.id === itemId);
@@ -621,19 +585,15 @@ function submitComment() {
   const text = input.value.trim();
   if (!text || !activeCommentItemId) return;
   const comment = {
-    id: uid(),
-    itemId: activeCommentItemId,
-    text,
+    id: uid(), itemId: activeCommentItemId, text,
     reaction: state.reactions[activeCommentItemId] || null,
     name: localStorage.getItem('refurb_user_name') || promptUserName(),
-    deviceId: DEVICE_ID,
-    createdAt: Date.now(),
+    deviceId: DEVICE_ID, createdAt: Date.now(),
   };
   state.comments.push(comment);
   saveComments();
   input.value = '';
-  renderCommentsList();
-  renderCards();
+  renderCommentsList(); renderCards();
   saveToDriveDebounced();
 }
 
@@ -643,7 +603,6 @@ function promptUserName() {
   return name;
 }
 
-// ── EXPORT SUMMARY (browser) ───────────────────────────────
 function buildExportHtml() {
   let sectionsHtml = '';
   state.rooms.forEach(room => {
@@ -657,16 +616,7 @@ function buildExportHtml() {
         const notesHtml = item.notes ? `<p style="font-size:0.8rem;color:#6B6B6B;margin:4px 0 0;line-height:1.5">${escHtml(item.notes)}</p>` : '';
         const itemComments = state.comments.filter(c => c.itemId === item.id);
         const commentsHtml = itemComments.length ? `<div style="margin-top:8px;border-top:1px solid #E0D8CF;padding-top:8px">${itemComments.map(c=>`<div style="font-size:0.75rem;color:#555;margin-bottom:4px"><strong>${escHtml(c.name||'Family')}</strong>: ${escHtml(c.text)}</div>`).join('')}</div>` : '';
-        return `<div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(44,44,44,0.08);break-inside:avoid">
-          <div style="border-top:4px solid ${escHtml(item.colour||'#C4704F')}"></div>
-          <div style="padding:12px 14px">
-            ${imgHtml}
-            <div style="font-family:'Playfair Display',serif;font-weight:600;font-size:0.95rem">${escHtml(item.title||'Untitled')}</div>
-            ${notesHtml}
-            <div style="margin-top:8px;font-size:0.82rem;color:#6B6B6B">❤️ ${r.love||0} &nbsp; 👍 ${r.like||0} &nbsp; 👎 ${r.dislike||0}</div>
-            ${commentsHtml}
-          </div>
-        </div>`;
+        return `<div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(44,44,44,0.08);break-inside:avoid"><div style="border-top:4px solid ${escHtml(item.colour||'#C4704F')}"></div><div style="padding:12px 14px">${imgHtml}<div style="font-family:'Playfair Display',serif;font-weight:600;font-size:0.95rem">${escHtml(item.title||'Untitled')}</div>${notesHtml}<div style="margin-top:8px;font-size:0.82rem;color:#6B6B6B">❤️ ${r.love||0} &nbsp; 👍 ${r.like||0} &nbsp; 👎 ${r.dislike||0}</div>${commentsHtml}</div></div>`;
       }).join('');
       roomHtml += `<div style="margin-bottom:24px"><h3 style="font-family:'Inter',sans-serif;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.1em;color:#6B6B6B;margin:0 0 12px;font-weight:600">${escHtml(cat)}</h3><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px">${cardsHtml}</div></div>`;
     });
@@ -684,7 +634,6 @@ function exportSummary() {
   else alert('Pop-up blocked. Please allow pop-ups and try again.');
 }
 
-// ── BUILD ANALYSIS JSON ────────────────────────────────────
 function buildAnalysisData() {
   return {
     exportedAt: new Date().toISOString(),
@@ -692,24 +641,18 @@ function buildAnalysisData() {
     totalItems: state.items.length,
     totalComments: state.comments.length,
     rooms: state.rooms.map(room => ({
-      id: room.id,
-      name: room.name,
+      id: room.id, name: room.name,
       categories: CATEGORIES.map(cat => {
         const catItems = state.items
           .filter(i => i.roomId === room.id && i.category === cat)
           .sort((a,b) => reactionScore(b) - reactionScore(a))
           .map(item => ({
-            id: item.id,
-            title: item.title,
-            notes: item.notes || null,
-            imageUrl: item.imageUrl || null,
-            colour: item.colour || null,
-            category: cat,
-            room: room.name,
+            id: item.id, title: item.title, notes: item.notes || null,
+            imageUrl: item.imageUrl || null, colour: item.colour || null,
+            category: cat, room: room.name,
             reactions: item.reactionCounts || { love:0, like:0, dislike:0 },
             score: reactionScore(item),
-            comments: state.comments
-              .filter(c => c.itemId === item.id)
+            comments: state.comments.filter(c => c.itemId === item.id)
               .map(c => ({ name: c.name || 'Family member', text: c.text, reaction: c.reaction, date: new Date(c.createdAt).toISOString() })),
             addedAt: new Date(item.createdAt || 0).toISOString(),
           }));
@@ -720,19 +663,15 @@ function buildAnalysisData() {
   };
 }
 
-// ── KEYBOARD ───────────────────────────────────────────────
 document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModal(); closeComments(); } });
 
-// ── INIT ──────────────────────────────────────────────────
 loadData();
 if (state.rooms.length > 0) state.activeRoomId = state.rooms[0].id;
 render();
 </script>
 
-<!-- Google Identity Services -->
 <script src="https://accounts.google.com/gsi/client" async></script>
 <script>
-// ── GOOGLE DRIVE CONFIG ────────────────────────────────────
 const GDRIVE_CLIENT_ID = '403538152707-cpk3r4ucju9pq28d96a2p0nqfvl778jl.apps.googleusercontent.com';
 const GDRIVE_FOLDER_ID = '1HaqD9eilBeilQtvNa3ALY70yn7siYOHy';
 const GDRIVE_OWNER     = 'cachafpm@gmail.com';
@@ -748,7 +687,6 @@ const DATA_FILENAME = `refurb-data-${DEVICE_ID}.json`;
 let gAccessToken = null, gTokenClient = null, pendingFile = null;
 let driveDebounceTimer = null;
 
-// ── AUTH ───────────────────────────────────────────────────
 function initGoogleAuth() {
   if (!window.google) return;
   gTokenClient = google.accounts.oauth2.initTokenClient({
@@ -784,7 +722,6 @@ function handleGoogleSignIn() {
   gTokenClient.requestAccessToken({ prompt: 'consent' });
 }
 
-// ── TOAST ──────────────────────────────────────────────────
 let toastTimer = null;
 function showToast(msg) {
   const el = document.getElementById('syncToast');
@@ -794,7 +731,6 @@ function showToast(msg) {
   toastTimer = setTimeout(() => el.classList.remove('show'), 3500);
 }
 
-// ── SAVE DEVICE DATA TO DRIVE ──────────────────────────────
 async function saveDataToDrive() {
   if (!gAccessToken) return;
   const payload = JSON.stringify({
@@ -802,6 +738,7 @@ async function saveDataToDrive() {
     userName: localStorage.getItem('refurb_user_name') || 'Family member',
     reactions: state.reactions,
     comments: state.comments.filter(c => c.deviceId === DEVICE_ID),
+    items: state.items.filter(i => i.addedByDeviceId === DEVICE_ID),
     savedAt: Date.now(),
   });
   const existingId = localStorage.getItem('refurb_drive_data_id');
@@ -832,7 +769,6 @@ function saveToDriveDebounced() {
   driveDebounceTimer = setTimeout(saveDataToDrive, 2000);
 }
 
-// ── SYNC FROM DRIVE ────────────────────────────────────────
 async function syncFromDrive() {
   if (!gAccessToken) return;
   showToast('⏳ Syncing from Drive…');
@@ -848,8 +784,18 @@ async function syncFromDrive() {
       catch { return null; }
     }))).filter(Boolean);
 
+    // Merge items: deduplicate by id, don't overwrite local items
+    const itemMap = {};
+    state.items.forEach(i => { itemMap[i.id] = i; });
+    allData.forEach(d => {
+      (d.items || []).forEach(item => {
+        if (!itemMap[item.id]) itemMap[item.id] = { ...item, reactionCounts: { love:0, like:0, dislike:0 } };
+      });
+    });
+    state.items = Object.values(itemMap).sort((a, b) => (a.createdAt||0) - (b.createdAt||0));
+
     // Merge reactions: tally per item across all devices
-    const reactionTotals = {}; // itemId → { love, like, dislike }
+    const reactionTotals = {};
     allData.forEach(d => {
       if (!d.reactions) return;
       Object.entries(d.reactions).forEach(([itemId, type]) => {
@@ -874,7 +820,6 @@ async function syncFromDrive() {
   }
 }
 
-// ── IMAGE UPLOAD ───────────────────────────────────────────
 function triggerFileUpload() {
   if (!gAccessToken) {
     if (!gTokenClient) initGoogleAuth();
@@ -916,7 +861,6 @@ async function doUpload(file) {
   }
 }
 
-// ── EXPORT SUMMARY TO DRIVE ────────────────────────────────
 async function exportToDrive() {
   if (!gAccessToken) { alert('Please sign in first.'); return; }
   showToast('⏳ Saving summary to Drive…');
@@ -936,14 +880,11 @@ async function exportToDrive() {
   } catch(e) { showToast('✗ Failed: ' + e.message); }
 }
 
-// ── AI ANALYSIS EXPORT ─────────────────────────────────────
 async function exportAnalysis() {
   const analysisData = buildAnalysisData();
   const json = JSON.stringify(analysisData, null, 2);
   const date = new Date().toISOString().slice(0,10);
   const filename = `Refurb-Analysis-${date}.json`;
-
-  // Save to Drive
   if (gAccessToken) {
     showToast('⏳ Saving analysis data to Drive…');
     try {
@@ -960,15 +901,12 @@ async function exportAnalysis() {
       showToast(`✓ Analysis JSON saved to Drive as "${filename}"`);
     } catch { showToast('✗ Drive save failed — downloading instead'); }
   }
-
-  // Always also download locally
   const a = document.createElement('a');
   a.href = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
   a.download = filename;
   a.click();
 }
 
-// ── HELPERS ────────────────────────────────────────────────
 async function drivePermission(fileId, body, qs='') {
   return fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions${qs}`, {
     method: 'POST',
