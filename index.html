@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -1419,14 +1419,18 @@ async function doUpload(file) {
     // 2. Make file publicly readable
     await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions`, {
       method: 'POST',
-      headers: {
-        Authorization: 'Bearer ' + gAccessToken,
-        'Content-Type': 'application/json',
-      },
+      headers: { Authorization: 'Bearer ' + gAccessToken, 'Content-Type': 'application/json' },
       body: JSON.stringify({ role: 'reader', type: 'anyone' }),
     });
 
-    // 3. Build public image URL and populate the URL field
+    // 3. Share with the folder owner so it appears in their Drive
+    await fetch(`https://www.googleapis.com/drive/v3/files/${fileId}/permissions?sendNotificationEmail=false`, {
+      method: 'POST',
+      headers: { Authorization: 'Bearer ' + gAccessToken, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ role: 'writer', type: 'user', emailAddress: 'cachafpm@gmail.com' }),
+    });
+
+    // 4. Build public image URL and populate the URL field
     const imageUrl = `https://drive.google.com/thumbnail?id=${fileId}&sz=w800`;
     document.getElementById('inputImageUrl').value = imageUrl;
     doPreview();
@@ -1456,3 +1460,4 @@ window.openAddModal = function() {
 </script>
 </body>
 </html>
+
