@@ -738,7 +738,7 @@ async function saveDataToDrive() {
     userName: localStorage.getItem('refurb_user_name') || 'Family member',
     reactions: state.reactions,
     comments: state.comments.filter(c => c.deviceId === DEVICE_ID),
-    items: state.items.filter(i => i.addedByDeviceId === DEVICE_ID),
+    items: state.items,
     savedAt: Date.now(),
   });
   const existingId = localStorage.getItem('refurb_drive_data_id');
