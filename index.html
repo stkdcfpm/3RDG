@@ -841,7 +841,7 @@ async function doUpload(file) {
   setUploadStatus('loading', '⏳ Uploading…');
   try {
     const form = new FormData();
-    form.append('metadata', new Blob([JSON.stringify({ name: file.name, parents: [GDRIVE_FOLDER_ID] })], { type: 'application/json' }));
+    form.append('metadata', new Blob([JSON.stringify({ name: file.name })], { type: 'application/json' }));
     form.append('file', file);
     const resp = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name', {
       method: 'POST', headers: { Authorization: 'Bearer ' + gAccessToken }, body: form,
